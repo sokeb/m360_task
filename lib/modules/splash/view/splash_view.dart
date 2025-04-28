@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -13,7 +14,9 @@ class _SplashViewState extends State<SplashView> {
     super.initState();
     Future<void>.delayed(
       const Duration(seconds: 2),
-      () {},
+      () {
+        if (mounted) context.goNamed('sign_in');
+      },
     );
   }
 
@@ -26,10 +29,11 @@ class _SplashViewState extends State<SplashView> {
             Align(
               child: Center(
                 child: AspectRatio(
-                    aspectRatio: 214 / 100,
-                    child: Image.asset(
-                      'assets/icons/logo.png',
-                    )),
+                  aspectRatio: 214 / 100,
+                  child: Image.asset(
+                    'assets/icons/logo.png',
+                  ),
+                ),
               ),
             ),
             Align(
