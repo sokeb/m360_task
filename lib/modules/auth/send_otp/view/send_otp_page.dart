@@ -8,8 +8,8 @@ class SendOtpPage extends StatelessWidget {
 
 
   static final route = GoRoute(
-    path: '/sign_up',
-    name: 'sign_up',
+    path: '/send_otp',
+    name: 'send_otp',
     builder: (context, state) => const SendOtpPage(),
   );
 

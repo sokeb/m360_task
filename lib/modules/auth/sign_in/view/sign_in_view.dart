@@ -31,7 +31,7 @@ class _SignInViewState extends State<SignInView> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 40),
+                const SizedBox(height: 90),
                 const Text(
                   'Sign In',
                   style: TextStyle(
@@ -40,7 +40,7 @@ class _SignInViewState extends State<SignInView> {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 2),
                 const Text(
                   "Let's save environment together",
                   style: TextStyle(
@@ -49,8 +49,7 @@ class _SignInViewState extends State<SignInView> {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                const SizedBox(height: 32),
-
+                const SizedBox(height: 105),
                 AppTextField(
                   labelText: 'Email',
                   hintText: 'user@example.com',
@@ -91,7 +90,9 @@ class _SignInViewState extends State<SignInView> {
                       ],
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.pushNamed('send_otp');
+                      },
                       child: const Text(
                         'Forgotten Password',
                         style: TextStyle(
@@ -107,24 +108,9 @@ class _SignInViewState extends State<SignInView> {
                 const SizedBox(height: 24),
 
                 // Sign In Button
-                SizedBox(
-                  width: double.infinity,
-                  height: 42,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      context.goNamed('sign_up');
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF47BA80),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                    child: const Text(
-                      'Sign In',
-                      style: TextStyle(fontSize: 18, color: Color(0xFFFFFFFF)),
-                    ),
-                  ),
+                AppButton(
+                  text: 'Sign in',
+                  onPressed: () {},
                 ),
 
                 const SizedBox(height: 24),
@@ -136,7 +122,7 @@ class _SignInViewState extends State<SignInView> {
                     style: TextStyle(color: Color(0xFFADADAD)),
                   ),
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 25),
 
                 // Social Icons
                 Row(
@@ -152,7 +138,7 @@ class _SignInViewState extends State<SignInView> {
                   ],
                 ),
 
-                const SizedBox(height: 32),
+                const SizedBox(height: 95),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

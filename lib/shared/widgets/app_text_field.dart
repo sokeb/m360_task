@@ -51,10 +51,10 @@ class AppTextField extends StatelessWidget {
           fontWeight: FontWeight.w500,
         ),
         border: const UnderlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFFE0E0E0)),
+          borderSide: BorderSide(color: Color(0xFFADADAD)),
         ),
         enabledBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFFE0E0E0)),
+          borderSide: BorderSide(color: Color(0xFFADADAD)),
         ),
         focusedBorder: UnderlineInputBorder(
           borderSide: BorderSide(color: Theme.of(context).primaryColor),
